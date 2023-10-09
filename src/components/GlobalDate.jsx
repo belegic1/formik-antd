@@ -17,7 +17,7 @@ const GlobalDate = ({ name, setFieldValue, value, span }) => {
               console.log(dateString);
               console.log(field.name);
 
-              setFieldValue(name, dateString);
+              setFieldValue({ target: { name: name, value: date } });
             }}
             value={value ? moment(value) : null}
           />

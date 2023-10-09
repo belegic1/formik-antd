@@ -66,7 +66,7 @@ const MyForm = () => {
 
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      {({ values, setFieldValue }) => (
+      {({ values, handleChange, setFieldValue }) => (
         <Form>
           <Row
             style={{
@@ -80,7 +80,7 @@ const MyForm = () => {
                 key={i}
                 {...inp}
                 values={values}
-                setFieldValue={setFieldValue}
+                setFieldValue={handleChange}
               />
             ))}
           </Row>
